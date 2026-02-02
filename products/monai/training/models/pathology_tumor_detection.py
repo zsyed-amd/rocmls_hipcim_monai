@@ -108,7 +108,7 @@ def prepare_training_data(params):
         reader="openslide" if params.get("use_openslide", False) else "cuCIM",
     )
     train_loader = DataLoader(
-        train_dataset, num_workers=2, batch_size=params["batch_size"], pin_memory=True
+        train_dataset, num_workers=0, batch_size=params["batch_size"], pin_memory=True
     )
 
     val_loader = None
@@ -127,7 +127,7 @@ def prepare_training_data(params):
             reader="openslide" if params.get("use_openslide", False) else "cuCIM",
         )
         val_loader = DataLoader(
-            valid_dataset, num_workers=2, batch_size=params["batch_size"], pin_memory=True
+            valid_dataset, num_workers=0, batch_size=params["batch_size"], pin_memory=True
         )
     return {"train": train_loader, "val": val_loader}
 

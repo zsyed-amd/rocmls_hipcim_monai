@@ -274,9 +274,23 @@ def get_available_data_files(model_id: str) -> List[str]:
         # Return relative paths from project root
         for file_path in data_dir.iterdir():
             if file_path.is_file() and not file_path.name.startswith('.'):
+                # Skip CSV files - we want actual image data
+                if file_path.suffix.lower() in ['.csv']:
+                    continue
                 # Convert to relative path
                 relative_path = file_path.relative_to(project_root)
                 data_files.append(str(relative_path))
+
+    # For pathology models, also check sample_images/camelyon directory
+    if model_id == 'pathology_tumor_detection':
+        camelyon_dir = project_root / "sample_images" / "camelyon"
+        if camelyon_dir.exists():
+            for file_path in camelyon_dir.iterdir():
+                if file_path.is_file() and not file_path.name.startswith('.'):
+                    # Only include .tif/.tiff files for pathology
+                    if file_path.suffix.lower() in ['.tif', '.tiff']:
+                        relative_path = file_path.relative_to(project_root)
+                        data_files.append(str(relative_path))
 
     return sorted(data_files)
 

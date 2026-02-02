@@ -126,13 +126,13 @@ def hipcim_layout():
         
         # System info footer
         st.markdown("###### ⚡ System Info")
-        cpu_details = get_cpu_info()
+       #cpu_details = get_cpu_info()
         gpu_details = get_gpu_info()
         hipcim_details = get_package_version("amd-hipcim")
         st.markdown(POWERED_BY_CSS, unsafe_allow_html=True)
         st.markdown(
             POWERED_BY_HTML.format(
-                cpu=cpu_details,
+               #cpu=cpu_details,
                 gpu=gpu_details,
                 hipcim=hipcim_details
             ),

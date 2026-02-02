@@ -164,8 +164,7 @@ POWERED_BY_CSS = """
 POWERED_BY_HTML = """
 <div class="powered-by-footer">
   <small>
-    <strong>💻 CPU:</strong> {cpu}<br>
-    <strong>🚀 GPU:</strong> {gpu}<br>
+    <strong> GPU:</strong> {gpu}<br>
     <strong>📦 CuPy:</strong> {cupy}<br>
     <strong>🖼️ hipCIM:</strong> {hipcim}<br>
     <strong>🧠 MONAI:</strong> {monai}

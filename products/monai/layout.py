@@ -49,7 +49,6 @@ def monai_footer(console_log_key):
     st.markdown(POWERED_BY_CSS, unsafe_allow_html=True)
     st.markdown(
         POWERED_BY_HTML.format(
-            cpu=cpu_details,
             gpu=gpu_details,
             hipcim=hipcim_details,
             monai=monai_details,

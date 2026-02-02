@@ -47,7 +47,7 @@ def display_metadata(cuImage):
             img_size = f"{size_h}",
             img_width = f"{width}px ({width_physical:.2f} {st.session_state['unit_x']})",
             img_height = f"{height}px ({height_physical:.2f} {st.session_state['unit_y']})",
-            device = f"{cuImage.device}",
+            device = f"GPU",
             px_type = f"{pixel_type}",
             dims = f"{cuImage.ndim} {cuImage.channel_names}"
         ),
