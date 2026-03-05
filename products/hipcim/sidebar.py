@@ -288,4 +288,6 @@ def hipcim_sidebar():
             st.markdown("---")
             st.caption(f"✅ {len(st.session_state['pipeline'])} transformation(s) configured")
 
+            
+
     return selected_wsi_filename, selected_wsi_filepath, tile_size, x, y

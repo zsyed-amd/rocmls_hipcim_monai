@@ -700,7 +700,8 @@ def monai_inference_driver():
                     try:
                         # Get configuration from Streamlit session state
                         tile_size = st.session_state.get('pathology_tile_size', 224)
-                        batch_size = st.session_state.get('pathology_batch_size', 4)
+                        #batch_size = st.session_state.get('pathology_batch_size', 4)
+                        batch_size = st.session_state.get('pathology_batch_size', 512)
                         confidence_threshold = st.session_state.get('pathology_confidence_threshold', 0.5)
 
                         info(INFER_CONSOLE_LOG_KEY, f"Configuration: tile_size={tile_size}, batch_size={batch_size}, threshold={confidence_threshold}")

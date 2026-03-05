@@ -190,10 +190,14 @@ def monai_inference_sidebar():
         # Batch size configuration
         batch_size = st.selectbox(
             "**Batch processing**",
-            options=[1, 2, 4, 8, 16, 32, 64, 128],
-            index=2,  # Default to 4
-            help="Number of tiles per batch. Higher values = faster processing.",
+            #options=[1, 2, 4, 8, 16, 32, 64, 128],
+            #index=2,  # Default to 4
+            #help="Number of tiles per batch. Higher values = faster processing.",
+            options=[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048],
+            index=9,  # Default to 512
+            help="Number of tiles per batch. Higher values = faster GPU utilization. 512 recommended for most GPUs. Use 1024-2048 if you have 64GB+ GPU memory.",
             key="pathology_batch_size"
+            
         )
 
         # Confidence threshold configuration
@@ -372,4 +376,3 @@ def monai_inference_sidebar():
         st.success(f"✅ Data: {filename}")
 
     return model_info is not None and input_data is not None
-
