@@ -1,11 +1,19 @@
 # AMD ROCm-LS Demo Application
 
+<<<<<<< HEAD
 <p align="center">
   <img src="assets/amd-logo.png" alt="AMD Logo" width="200"/>
 </p>
 
 **Accelerated Imaging & AI Workflows for Life Sciences**  
 **Featuring hipCIM and MONAI on AMD Instinct™ GPUs**
+=======
+<p align="right">
+  <img src="assets/amd-logo.png" alt="AMD Logo" width="200"/>
+</p>
+
+**Accelerated Imaging & AI Workflows for Life Sciences - Featuring hipCIM and MONAI on AMD Instinct™ GPUs**
+>>>>>>> 70864bf3f62b5317a7e915183b18e4dd0248198d
 
 ---
 
@@ -258,6 +266,12 @@ tar -xf - --strip-components=2 --wildcards \
 ```
 
 ---
+<<<<<<< HEAD
+=======
+## Screenshots
+<img width="2780" height="1238" alt="image" src="https://github.com/user-attachments/assets/ff06ed8b-ab56-4fd1-9e9b-22c76bca71b6" />
+<img width="2797" height="1145" alt="image" src="https://github.com/user-attachments/assets/f84df211-8a74-4f55-a505-401238c729cc" />
+>>>>>>> 70864bf3f62b5317a7e915183b18e4dd0248198d
 
 ## Troubleshooting
 
@@ -276,15 +290,13 @@ tar -xf - --strip-components=2 --wildcards \
 - [hipCIM GitHub](https://github.com/ROCm-LS/hipCIM)
 - [MONAI for ROCm](https://github.com/ROCm-LS/monai)
 - [ROCm-LS Organization](https://github.com/ROCm-LS)
+<<<<<<< HEAD
 
 ---
+=======
+>>>>>>> 70864bf3f62b5317a7e915183b18e4dd0248198d
 
-## Contributors
-
-- Soumitra Chatterjee
-- Anik Chaudhuri
-- Chandan Sharma
-- Prateek Chokse
+---
 
 ---
 
