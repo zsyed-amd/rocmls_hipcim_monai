@@ -1,0 +1,111 @@
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--space-xl);
+}
+
+.inner {
+  background: var(--amd-bg-card);
+  border: 1px solid var(--amd-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--amd-border);
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.panelTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-title);
+  color: var(--amd-white);
+}
+
+.goldAccent {
+  display: block;
+  width: 3px;
+  height: 20px;
+  background-color: var(--amd-gold);
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.caption {
+  font-family: var(--font-primary);
+  font-size: var(--text-small);
+  color: var(--amd-border-mid);
+  max-width: 540px;
+  line-height: 1.5;
+}
+
+.frameWrapper {
+  position: relative;
+  width: 100%;
+  height: 720px;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  background: var(--amd-bg);
+}
+
+.fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  background: var(--amd-bg);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.frame:not([src]),
+.frame[src="about:blank"] ~ .fallback {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.fallbackIcon {
+  color: var(--amd-border-mid);
+}
+
+.fallbackText {
+  font-family: var(--font-primary);
+  font-size: var(--text-body);
+  color: var(--amd-muted);
+}
+
+.fallbackCode {
+  font-family: 'Courier New', monospace;
+  font-size: var(--text-small);
+  color: var(--amd-teal);
+  background: var(--amd-bg-input);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--amd-border-mid);
+}
+
+.fallbackLink {
+  font-family: var(--font-primary);
+  font-size: var(--text-body);
+  color: var(--amd-teal);
+  pointer-events: auto;
+}

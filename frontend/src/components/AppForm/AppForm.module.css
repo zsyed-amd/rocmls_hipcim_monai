@@ -1,0 +1,104 @@
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 var(--space-xl);
+}
+
+.inner {
+  background: var(--amd-bg-card);
+  border: 1px solid var(--amd-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--amd-border);
+  overflow-x: auto;
+}
+
+.tab {
+  flex-shrink: 0;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-primary);
+  font-size: var(--text-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--amd-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.tab:hover { color: var(--amd-white); }
+
+.tabActive {
+  color: var(--amd-teal);
+  border-bottom-color: var(--amd-teal);
+}
+
+.body {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.heading {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-sub);
+  color: var(--amd-white);
+  line-height: 1.3;
+}
+
+.description {
+  font-family: var(--font-primary);
+  font-size: var(--text-body);
+  color: var(--amd-muted);
+  line-height: 1.65;
+  max-width: 680px;
+}
+
+.launchWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.launchBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, var(--amd-teal), var(--amd-teal-dark));
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-body);
+  color: var(--amd-black);
+  text-decoration: none;
+  transition: opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+.launchBtn:hover {
+  opacity: 0.9;
+  box-shadow: var(--shadow-teal);
+  color: var(--amd-black);
+}
+
+.launchNote {
+  font-family: var(--font-primary);
+  font-size: var(--text-small);
+  color: var(--amd-border-mid);
+}
