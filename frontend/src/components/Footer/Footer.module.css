@@ -1,4 +1,12 @@
 .footer {
+  width: 100%;
+  border-top: 1px solid var(--amd-border);
+  font-family: var(--font-primary);
+  font-size: var(--text-small);
+  color: var(--amd-border-mid);
+}
+
+.inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,13 +14,17 @@
   margin: 0 auto;
   width: 100%;
   padding: var(--space-lg) var(--space-xl);
-  border-top: 1px solid var(--amd-border);
-  font-family: var(--font-primary);
-  font-size: var(--text-small);
-  color: var(--amd-border-mid);
 }
 
 .year {
   color: var(--amd-border-mid);
   opacity: 0.6;
 }
+
+.link {
+  color: var(--amd-teal);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.link:hover { opacity: 0.75; }
