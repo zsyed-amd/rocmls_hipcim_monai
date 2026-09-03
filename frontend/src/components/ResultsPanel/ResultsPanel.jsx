@@ -1,7 +1,13 @@
 import { motion, AnimatePresence } from 'framer-motion'
+import MetricsPanel from '../metrics/MetricsPanel.jsx'
 import styles from './ResultsPanel.module.css'
 
 const STREAMLIT_URL = 'http://localhost:8501'
+
+// Tabs migrated off the Streamlit iframe onto the standalone API.
+const NATIVE_PANELS = {
+  metrics: MetricsPanel,
+}
 
 const TAB_CONFIG = {
   hipcim: {
@@ -28,6 +34,7 @@ const TAB_CONFIG = {
 
 export default function ResultsPanel({ activeTab }) {
   const config = TAB_CONFIG[activeTab] || TAB_CONFIG.hipcim
+  const NativePanel = NATIVE_PANELS[activeTab]
 
   return (
     <section className={styles.section} data-tour="results">
@@ -49,6 +56,10 @@ export default function ResultsPanel({ activeTab }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
+            {NativePanel ? (
+              <NativePanel />
+            ) : (
+            <>
             <iframe
               src={STREAMLIT_URL}
               title={`AMD ROCm Life Sciences Demo — ${config.label}`}
@@ -69,6 +80,8 @@ export default function ResultsPanel({ activeTab }) {
                 Open in new tab →
               </a>
             </div>
+            </>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
